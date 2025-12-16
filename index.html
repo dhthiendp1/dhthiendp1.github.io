@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đỗ Hữu Thiên | Portfolio Cơ Điện Tử</title>
-    <meta name="description" content="Portfolio của Đỗ Hữu Thiên - Kỹ sư Cơ Điện Tử.">
+    <meta name="description" content="Portfolio của Đỗ Hữu Thiên - Kỹ sư Cơ Điện Tử, chuyên về Tự động hóa, AI và Robotics.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -59,16 +59,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="#" class="text-2xl font-bold text-primary">Đỗ Hữu Thiên</a>
+                    <a href="#" class="text-2xl font-bold text-primary">DHThien<span class="text-dark">.Dev</span></a>
                 </div>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-700 transition shadow-lg shadow-blue-500/30">Giới thiệu</a>
-                    <a href="#skills" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-purple-700 transition shadow-lg shadow-blue-500/30"">Kỹ năng</a>
-                    <a href="#projects" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-green-700 transition shadow-lg shadow-blue-500/30"">Dự án</a>
-                    <a href="#awards" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-yellow-700 transition shadow-lg shadow-blue-500/30"">Thành tích</a>
-                    <a href="#contact" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-orange-700 transition shadow-lg shadow-blue-500/30">Liên hệ</a>
+                    <a href="#about" class="text-slate-600 hover:text-primary font-medium transition">Giới thiệu</a>
+                    <a href="#skills" class="text-slate-600 hover:text-primary font-medium transition">Kỹ năng</a>
+                    <a href="#projects" class="text-slate-600 hover:text-primary font-medium transition">Dự án</a>
+                    <a href="#awards" class="text-slate-600 hover:text-primary font-medium transition">Thành tích</a>
+                    <a href="#contact" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-700 transition shadow-lg shadow-blue-500/30">Liên hệ</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -114,7 +114,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <a href="#contact" class="px-8 py-3 bg-primary text-white rounded-full font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                        Liên hệ
+                        Liên hệ hợp tác
                     </a>
                     <a href="#" onclick="alert('Tính năng tải CV đang được cập nhật!')" class="px-8 py-3 bg-white text-slate-700 border border-slate-300 rounded-full font-semibold hover:bg-slate-50 transition flex items-center justify-center gap-2">
                         <i class="fas fa-download"></i> Tải CV
@@ -131,10 +131,19 @@
             <div class="lg:w-1/2 flex justify-center relative">
                 <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                     <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-full opacity-20 animate-pulse"></div>
-                    <!-- Placeholder Avatar using FontAwesome User Icon since no image provided -->
+                    
+                    <!-- AVATAR IMAGE -->
                     <div class="absolute inset-2 bg-white rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-2xl">
-                         <i class="fas fa-user-graduate text-9xl text-slate-300"></i>
+                         <!-- CẬP NHẬT: Thay thế icon bằng thẻ img -->
+                         <!-- Hướng dẫn: Đảm bảo bạn có file ảnh 'avatar.jpg' trong thư mục 'assets' -->
+                         <img src="assets/avatar.jpg" alt="Avatar Đỗ Hữu Thiên" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                         
+                         <!-- Fallback: Nếu ảnh lỗi hoặc chưa có ảnh, sẽ hiện icon này -->
+                         <div class="absolute inset-0 flex items-center justify-center bg-slate-200 hidden">
+                             <i class="fas fa-user-graduate text-9xl text-slate-400"></i>
+                         </div>
                     </div>
+
                     <!-- Floating Cards -->
                     <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg border border-slate-100 animate-bounce" style="animation-duration: 3s;">
                         <div class="flex items-center gap-3">
@@ -283,19 +292,25 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12">
                 <div>
-                    <h2 class="text-3xl font-bold text-dark">KINH NGHIỆM DỰ ÁN</h2>
+                    <h2 class="text-3xl font-bold text-dark">Dự Án Nổi Bật</h2>
                     <p class="text-slate-500 mt-2">Các dự án thực tế và nghiên cứu khoa học</p>
                 </div>
-                <!-- <a href="#" class="text-primary font-semibold hover:underline mt-4 md:mt-0">Xem tất cả dự án <i class="fas fa-arrow-right ml-1"></i></a> -->
             </div>
 
             <div class="space-y-12">
                 <!-- Project 1 -->
                 <div class="flex flex-col lg:flex-row gap-8 items-start border-b border-slate-100 pb-12">
                     <div class="lg:w-5/12 w-full bg-slate-100 h-64 rounded-xl flex items-center justify-center overflow-hidden relative group">
-                         <!-- Placeholder for project image -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                        <i class="fas fa-industry text-6xl text-slate-300 group-hover:scale-110 transition duration-500"></i>
+                        
+                        <!-- CẬP NHẬT: PROJECT IMAGE 1 -->
+                        <!-- Hướng dẫn: Đảm bảo bạn có file ảnh 'project1.jpg' trong thư mục 'assets' -->
+                        <img src="assets/project1.jpg" alt="MTA Challenge" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.nextElementSibling.style.display='block'">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        
+                        <!-- Fallback Icon nếu ảnh lỗi -->
+                        <i class="fas fa-industry text-6xl text-slate-300 hidden absolute"></i>
+                        
                         <div class="absolute bottom-4 left-4 text-white">
                             <span class="bg-yellow-500 text-xs font-bold px-2 py-1 rounded">Á Quân</span>
                         </div>
@@ -330,9 +345,17 @@
                 <!-- Project 2 -->
                 <div class="flex flex-col lg:flex-row gap-8 items-start">
                     <div class="lg:w-5/12 w-full bg-slate-100 h-64 rounded-xl flex items-center justify-center overflow-hidden relative group">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                        <i class="fas fa-robot text-6xl text-slate-300 group-hover:scale-110 transition duration-500"></i>
-                         <div class="absolute bottom-4 left-4 text-white">
+                        
+                         <!-- CẬP NHẬT: PROJECT IMAGE 2 -->
+                        <!-- Hướng dẫn: Đảm bảo bạn có file ảnh 'project2.jpg' trong thư mục 'assets' -->
+                        <img src="assets/project2.jpg" alt="Robot Arm Project" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.nextElementSibling.style.display='block'">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        
+                        <!-- Fallback Icon nếu ảnh lỗi -->
+                        <i class="fas fa-robot text-6xl text-slate-300 hidden absolute"></i>
+                        
+                        <div class="absolute bottom-4 left-4 text-white">
                             <span class="bg-blue-500 text-xs font-bold px-2 py-1 rounded">Giải Khuyến Khích</span>
                         </div>
                     </div>
@@ -462,7 +485,7 @@
                 <div>
                     <h2 class="text-3xl font-bold mb-4">Liên hệ với tôi</h2>
                     <p class="text-slate-400 mb-6">
-                        
+                        Tôi luôn sẵn sàng cho những cơ hội hợp tác mới, đặc biệt là trong lĩnh vực Tự động hóa và OE.
                     </p>
                     <div class="space-y-4">
                         <div class="flex items-center gap-3">
