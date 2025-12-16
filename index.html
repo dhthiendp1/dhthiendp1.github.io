@@ -6,7 +6,7 @@
     <title>Đỗ Hữu Thiên | Portfolio Cơ Điện Tử</title>
     <meta name="description" content="Portfolio của Đỗ Hữu Thiên - Kỹ sư Cơ Điện Tử, chuyên về Tự động hóa, AI và Robotics.">
     
-    <!-- Tailwind CSS (Sử dụng CDN cho nhanh, không cần cài đặt) -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -46,11 +46,11 @@
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-700 transition shadow-lg shadow-green-500/30">Giới thiệu</a>
-                    <a href="#skills" class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-700 transition shadow-lg shadow-yellow-500/30">Kỹ năng</a>
-                    <a href="#projects" class="px-4 py-2 bg-sky-500 text-white rounded-lg hover:bg-sky-700 transition shadow-lg shadow-sky-500/30">Dự án</a>
-                    <a href="#awards" class="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-700 transition shadow-lg shadow-orange-500/30">Thành tích</a>
-                    <a href="#contact" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition shadow-lg shadow-blue-700/30">Liên hệ</a>
+                    <a href="#about" class="text-slate-600 hover:text-primary font-medium transition">Giới thiệu</a>
+                    <a href="#skills" class="text-slate-600 hover:text-primary font-medium transition">Kỹ năng</a>
+                    <a href="#projects" class="text-slate-600 hover:text-primary font-medium transition">Dự án</a>
+                    <a href="#awards" class="text-slate-600 hover:text-primary font-medium transition">Thành tích</a>
+                    <a href="#contact" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-700 transition shadow-lg shadow-blue-500/30">Liên hệ</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -69,7 +69,7 @@
                 <a href="#skills" class="block px-3 py-2 text-slate-600 hover:text-primary hover:bg-slate-50 rounded-md">Kỹ năng</a>
                 <a href="#projects" class="block px-3 py-2 text-slate-600 hover:text-primary hover:bg-slate-50 rounded-md">Dự án</a>
                 <a href="#awards" class="block px-3 py-2 text-slate-600 hover:text-primary hover:bg-slate-50 rounded-md">Thành tích</a>
-                <a href="#contact" class="block px-3 py-2 text-primary font-semibold">Liên hệ</a>
+                <a href="#contact" class="block px-3 py-2 text-primary font-semibold">Liên hệ ngay</a>
             </div>
         </div>
     </nav>
@@ -77,7 +77,6 @@
     <!-- Hero Section -->
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div class="absolute inset-0 -z-10">
-             <!-- Abstract Background Shapes -->
             <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-blue-100 blur-3xl opacity-50"></div>
             <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-purple-100 blur-3xl opacity-50"></div>
         </div>
@@ -85,7 +84,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-12">
             <div class="lg:w-1/2 text-center lg:text-left">
                 <div class="inline-block px-3 py-1 mb-4 text-sm font-semibold text-blue-800 bg-blue-100 rounded-full">
-                    <i class="fas fa-robot mr-2"></i>Kỹ Thuật Cơ Điện Tử
+                    <i class="fas fa-robot mr-2"></i>Kỹ Thuật Cơ Điện Tử & Tự Động Hóa
                 </div>
                 <h1 class="text-4xl lg:text-6xl font-bold text-dark mb-6 leading-tight">
                     Xin chào, mình là <br>
@@ -96,7 +95,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <a href="#contact" class="px-8 py-3 bg-primary text-white rounded-full font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                        Liên hệ
+                        Liên hệ hợp tác
                     </a>
                     <a href="#" onclick="alert('Tính năng tải CV đang được cập nhật!')" class="px-8 py-3 bg-white text-slate-700 border border-slate-300 rounded-full font-semibold hover:bg-slate-50 transition flex items-center justify-center gap-2">
                         <i class="fas fa-download"></i> Tải CV
@@ -114,7 +113,6 @@
                 <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                     <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-full opacity-20 animate-pulse"></div>
                     
-                    <!-- AVATAR IMAGE -->
                     <div class="absolute inset-2 bg-white rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-2xl">
                          <img src="assets/avatar.jpg" alt="Avatar Đỗ Hữu Thiên" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                          <div class="absolute inset-0 flex items-center justify-center bg-slate-200 hidden">
@@ -122,7 +120,6 @@
                          </div>
                     </div>
 
-                    <!-- Floating Cards -->
                     <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg border border-slate-100 animate-bounce" style="animation-duration: 3s;">
                         <div class="flex items-center gap-3">
                             <div class="bg-green-100 p-2 rounded-lg text-green-600">
@@ -139,7 +136,7 @@
         </div>
     </section>
 
-    <!-- About / Objectives Section -->
+    <!-- About Section -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -148,7 +145,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Short Term -->
                 <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition group">
                     <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
                         <i class="fas fa-hourglass-half text-blue-600 text-xl"></i>
@@ -159,7 +155,6 @@
                     </p>
                 </div>
 
-                <!-- Long Term -->
                 <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition group">
                     <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
                         <i class="fas fa-chart-line text-purple-600 text-xl"></i>
@@ -182,7 +177,6 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- CAD/CAM -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                     <h3 class="text-lg font-bold text-dark mb-4 flex items-center gap-2">
                         <i class="fas fa-drafting-compass text-primary"></i> Thiết kế & Gia công (CAD/CAM)
@@ -218,7 +212,6 @@
                     </div>
                 </div>
 
-                <!-- Programming -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                     <h3 class="text-lg font-bold text-dark mb-4 flex items-center gap-2">
                         <i class="fas fa-code text-primary"></i> Lập trình & Nhúng
@@ -237,7 +230,6 @@
                     </p>
                 </div>
 
-                <!-- AI & Robot -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                     <h3 class="text-lg font-bold text-dark mb-4 flex items-center gap-2">
                         <i class="fas fa-brain text-primary"></i> AI & Robotics
@@ -278,28 +270,21 @@
             <div class="space-y-12">
                 <!-- Project 1 with CAROUSEL -->
                 <div class="flex flex-col lg:flex-row gap-8 items-start border-b border-slate-100 pb-12">
-                    
-                    <!-- Carousel Container -->
-                    <div class="lg:w-1/2 w-full bg-slate-100 h-80 rounded-xl relative overflow-hidden group shadow-md" id="carousel-mta">
-                        <!-- Slide 1 -->
+                    <div class="lg:w-5/12 w-full bg-slate-100 h-80 rounded-xl relative overflow-hidden group shadow-md" id="carousel-mta">
                         <div class="carousel-slide absolute inset-0 opacity-100 z-10 w-full h-full">
                             <img src="assets/project1_1.jpg" alt="MTA Slide 1" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/600x400?text=MTA+Challenge+1'">
                         </div>
-                        <!-- Slide 2 -->
                         <div class="carousel-slide absolute inset-0 opacity-0 z-0 w-full h-full">
                             <img src="assets/project1_2.jpg" alt="MTA Slide 2" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/600x400?text=MTA+Challenge+2'">
                         </div>
-                        <!-- Slide 3 -->
                         <div class="carousel-slide absolute inset-0 opacity-0 z-0 w-full h-full">
                             <img src="assets/project1_3.jpg" alt="MTA Slide 3" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/600x400?text=MTA+Challenge+3'">
                         </div>
 
-                        <!-- Badge -->
                         <div class="absolute bottom-4 left-4 z-20">
                              <span class="bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded shadow">Á Quân</span>
                         </div>
 
-                        <!-- Carousel Controls -->
                         <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 z-20 transition" onclick="prevSlide('carousel-mta')">
                             <i class="fas fa-chevron-left"></i>
                         </button>
@@ -335,22 +320,38 @@
                     </div>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Project 2 with CAROUSEL -->
                 <div class="flex flex-col lg:flex-row gap-8 items-start">
-                    <div class="lg:w-1/2 w-full bg-slate-100 h-8080 rounded-xl flex items-center justify-center overflow-hidden relative group">
-                        
-                         <!-- PROJECT IMAGE 2 -->
-                        <img src="assets/project2.jpg" alt="Robot Arm Project" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.nextElementSibling.style.display='block'">
-
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        
-                        <!-- Fallback Icon nếu ảnh lỗi -->
-                        <i class="fas fa-robot text-6xl text-slate-300 hidden absolute"></i>
-                        
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <span class="bg-blue-500 text-xs font-bold px-2 py-1 rounded">Giải Khuyến Khích</span>
+                    
+                    <!-- Carousel Container for Robot Project -->
+                    <div class="lg:w-5/12 w-full bg-slate-100 h-80 rounded-xl relative overflow-hidden group shadow-md" id="carousel-robot">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide absolute inset-0 opacity-100 z-10 w-full h-full">
+                            <img src="assets/project2_1.jpg" alt="Robot Slide 1" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/600x400?text=Robot+Arm+1'">
                         </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide absolute inset-0 opacity-0 z-0 w-full h-full">
+                            <img src="assets/project2_2.jpg" alt="Robot Slide 2" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/600x400?text=Robot+Arm+2'">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide absolute inset-0 opacity-0 z-0 w-full h-full">
+                            <img src="assets/project2_3.jpg" alt="Robot Slide 3" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/600x400?text=Robot+Arm+3'">
+                        </div>
+
+                        <!-- Badge -->
+                        <div class="absolute bottom-4 left-4 z-20">
+                             <span class="bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded shadow">Giải Khuyến Khích</span>
+                        </div>
+
+                        <!-- Carousel Controls -->
+                        <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 z-20 transition" onclick="prevSlide('carousel-robot')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 z-20 transition" onclick="nextSlide('carousel-robot')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
+
                     <div class="lg:w-7/12 w-full">
                         <h3 class="text-2xl font-bold text-dark">Nghiên cứu khoa học: Cánh tay robot 4 bậc tự do</h3>
                         <p class="text-primary font-medium mb-4">Môi trường hàn kim loại chi phí thấp</p>
@@ -410,9 +411,7 @@
                     <div class="space-y-4">
                         <!-- Award 1 -->
                         <div class="flex gap-4 items-start p-4 bg-white rounded-lg shadow-sm border border-slate-100 hover:shadow-md transition">
-                             <!-- Image Container for Award (96x96px) -->
                              <div class="w-24 h-24 flex-shrink-0 bg-slate-100 rounded-md overflow-hidden border border-slate-200">
-                                <!-- Chèn ảnh giải thưởng vào đây -->
                                 <img src="assets/award1.jpg" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/150?text=IMG'">
                              </div>
                             <div>
@@ -444,7 +443,7 @@
                                <img src="assets/award3.jpg" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/150?text=IMG'">
                             </div>
                            <div>
-                               <h4 class="font-bold text-dark">Giải Nhì "Ứng Dụng Tin Học Trong CTM"</h4>
+                               <h4 class="font-bold text-dark">Giải Nhì "Ứng Dụng Tin Học Trong Chi Tiết Máy"</h4>
                                <p class="text-sm text-slate-500 mb-1">04/2024</p>
                                 <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded border border-slate-200">
                                    <i class="fas fa-medal mr-1"></i>Giải Nhì
@@ -501,13 +500,14 @@
         </div>
     </section>
 
-    <!-- Footer / Contact -->
+    <!-- Footer -->
     <footer id="contact" class="bg-dark text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <h2 class="text-3xl font-bold mb-4">Liên hệ với tôi</h2>
                     <p class="text-slate-400 mb-6">
+                        Tôi luôn sẵn sàng cho những cơ hội hợp tác mới, đặc biệt là trong lĩnh vực Tự động hóa và OE.
                     </p>
                     <div class="space-y-4">
                         <div class="flex items-center gap-3">
@@ -540,7 +540,7 @@
         </div>
     </footer>
 
-    <!-- LIÊN KẾT FILE JS RIÊNG (Đặt cuối body để đảm bảo HTML đã load xong) -->
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
 </body>
 </html>

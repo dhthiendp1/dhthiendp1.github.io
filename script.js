@@ -45,7 +45,7 @@ function setupCarousel(id, interval = 2000) {
         showSlide(currentIndex);
     }
 
-    // Public functions for buttons (gắn vào window để gọi từ HTML)
+    // Public functions for buttons
     window.nextSlide = function(carouselId) {
         if(carouselId === id) {
             nextSlide();
@@ -69,7 +69,7 @@ function setupCarousel(id, interval = 2000) {
         startTimer();
     }
 
-    // Swipe logic (Touch events for mobile)
+    // Swipe logic
     container.addEventListener('touchstart', e => {
         startX = e.changedTouches[0].screenX;
     });
@@ -77,10 +77,10 @@ function setupCarousel(id, interval = 2000) {
     container.addEventListener('touchend', e => {
         const endX = e.changedTouches[0].screenX;
         if (startX - endX > 50) {
-            nextSlide(); // Swipe Left -> Next
+            nextSlide();
             resetTimer();
         } else if (endX - startX > 50) {
-            prevSlide(); // Swipe Right -> Prev
+            prevSlide();
             resetTimer();
         }
     });
@@ -90,7 +90,8 @@ function setupCarousel(id, interval = 2000) {
     startTimer();
 }
 
-// Initialize Carousel when DOM is loaded
+// Initialize Carousels when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    setupCarousel('carousel-mta', 2000);
+    setupCarousel('carousel-mta', 2000);   // Carousel 1
+    setupCarousel('carousel-robot', 2500); // Carousel 2 (Project Robot) - Thời gian hơi khác để 2 cái không chạy cùng lúc
 });
