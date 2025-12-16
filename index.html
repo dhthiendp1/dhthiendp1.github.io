@@ -50,6 +50,11 @@
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
         }
+        
+        /* Carousel Styles */
+        .carousel-slide {
+            transition: opacity 0.5s ease-in-out;
+        }
     </style>
 </head>
 <body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-primary selection:text-white">
@@ -59,7 +64,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="#" class="text-2xl font-bold text-primary">DHThien<span class="text-dark">.Dev</span></a>
+                    <!-- UPDATE: Changed Logo Text -->
+                    <a href="#" class="text-2xl font-bold text-primary">Đỗ Hữu Thiên</a>
                 </div>
                 
                 <!-- Desktop Menu -->
@@ -134,11 +140,7 @@
                     
                     <!-- AVATAR IMAGE -->
                     <div class="absolute inset-2 bg-white rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-2xl">
-                         <!-- CẬP NHẬT: Thay thế icon bằng thẻ img -->
-                         <!-- Hướng dẫn: Đảm bảo bạn có file ảnh 'avatar.jpg' trong thư mục 'assets' -->
                          <img src="assets/avatar.jpg" alt="Avatar Đỗ Hữu Thiên" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                         
-                         <!-- Fallback: Nếu ảnh lỗi hoặc chưa có ảnh, sẽ hiện icon này -->
                          <div class="absolute inset-0 flex items-center justify-center bg-slate-200 hidden">
                              <i class="fas fa-user-graduate text-9xl text-slate-400"></i>
                          </div>
@@ -298,23 +300,38 @@
             </div>
 
             <div class="space-y-12">
-                <!-- Project 1 -->
+                <!-- Project 1 with CAROUSEL -->
                 <div class="flex flex-col lg:flex-row gap-8 items-start border-b border-slate-100 pb-12">
-                    <div class="lg:w-5/12 w-full bg-slate-100 h-64 rounded-xl flex items-center justify-center overflow-hidden relative group">
-                        
-                        <!-- CẬP NHẬT: PROJECT IMAGE 1 -->
-                        <!-- Hướng dẫn: Đảm bảo bạn có file ảnh 'project1.jpg' trong thư mục 'assets' -->
-                        <img src="assets/project1.jpg" alt="MTA Challenge" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.nextElementSibling.style.display='block'">
-                        
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        
-                        <!-- Fallback Icon nếu ảnh lỗi -->
-                        <i class="fas fa-industry text-6xl text-slate-300 hidden absolute"></i>
-                        
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <span class="bg-yellow-500 text-xs font-bold px-2 py-1 rounded">Á Quân</span>
+                    
+                    <!-- UPDATE: Carousel Container -->
+                    <div class="lg:w-5/12 w-full bg-slate-100 h-64 rounded-xl relative overflow-hidden group shadow-md" id="carousel-mta">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide absolute inset-0 opacity-100 z-10 w-full h-full">
+                            <img src="assets/project1_1.jpg" alt="MTA Slide 1" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/600x400?text=MTA+Challenge+1'">
                         </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide absolute inset-0 opacity-0 z-0 w-full h-full">
+                            <img src="assets/project1_2.jpg" alt="MTA Slide 2" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/600x400?text=MTA+Challenge+2'">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide absolute inset-0 opacity-0 z-0 w-full h-full">
+                            <img src="assets/project1_3.jpg" alt="MTA Slide 3" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/600x400?text=MTA+Challenge+3'">
+                        </div>
+
+                        <!-- Badge -->
+                        <div class="absolute bottom-4 left-4 z-20">
+                             <span class="bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded shadow">Á Quân</span>
+                        </div>
+
+                        <!-- Carousel Controls -->
+                        <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 z-20 transition" onclick="prevSlide('carousel-mta')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 z-20 transition" onclick="nextSlide('carousel-mta')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
+
                     <div class="lg:w-7/12 w-full">
                         <div class="flex justify-between items-start">
                             <h3 class="text-2xl font-bold text-dark">MTA Challenge | Smart Factory Solution</h3>
@@ -347,7 +364,6 @@
                     <div class="lg:w-5/12 w-full bg-slate-100 h-64 rounded-xl flex items-center justify-center overflow-hidden relative group">
                         
                          <!-- CẬP NHẬT: PROJECT IMAGE 2 -->
-                        <!-- Hướng dẫn: Đảm bảo bạn có file ảnh 'project2.jpg' trong thư mục 'assets' -->
                         <img src="assets/project2.jpg" alt="Robot Arm Project" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.nextElementSibling.style.display='block'">
 
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -413,33 +429,64 @@
                         <span class="w-8 h-8 bg-yellow-100 rounded text-yellow-600 flex items-center justify-center text-sm"><i class="fas fa-trophy"></i></span>
                         Giải Thưởng & Thành Tích
                     </h2>
+                    
+                    <!-- UPDATE: Awards with Images Support -->
                     <div class="space-y-4">
-                        <div class="flex gap-4 items-start p-4 bg-white rounded-lg shadow-sm border border-slate-100">
-                            <div class="text-yellow-500 mt-1"><i class="fas fa-medal"></i></div>
+                        <!-- Award 1 -->
+                        <div class="flex gap-4 items-start p-4 bg-white rounded-lg shadow-sm border border-slate-100 hover:shadow-md transition">
+                             <!-- Image Container for Award (96x96px) -->
+                             <div class="w-24 h-24 flex-shrink-0 bg-slate-100 rounded-md overflow-hidden border border-slate-200">
+                                <!-- Chèn ảnh giải thưởng vào đây. Đặt tên file là award1.jpg -->
+                                <img src="assets/award1.jpg" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/150?text=IMG'">
+                             </div>
                             <div>
-                                <h4 class="font-bold text-dark">Giải Nhì Olympic Cơ Học Toàn Quốc lần thứ 35</h4>
-                                <p class="text-sm text-slate-500">Môn: Ứng dụng tin học trong chi tiết máy (04/2025)</p>
+                                <h4 class="font-bold text-dark">Giải Nhì Olympic Cơ Học Toàn Quốc</h4>
+                                <p class="text-sm text-slate-500 mb-1">Môn: Ứng dụng tin học trong chi tiết máy (04/2025)</p>
+                                <span class="text-xs font-semibold text-yellow-600 bg-yellow-50 px-2 py-1 rounded border border-yellow-100">
+                                    <i class="fas fa-medal mr-1"></i>Huy chương Bạc
+                                </span>
                             </div>
                         </div>
-                        <div class="flex gap-4 items-start p-4 bg-white rounded-lg shadow-sm border border-slate-100">
-                            <div class="text-slate-400 mt-1"><i class="fas fa-medal"></i></div>
+
+                        <!-- Award 2 -->
+                        <div class="flex gap-4 items-start p-4 bg-white rounded-lg shadow-sm border border-slate-100 hover:shadow-md transition">
+                             <div class="w-24 h-24 flex-shrink-0 bg-slate-100 rounded-md overflow-hidden border border-slate-200">
+                                <img src="assets/award2.jpg" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/150?text=IMG'">
+                             </div>
                             <div>
                                 <h4 class="font-bold text-dark">Giải Nhì cuộc thi MTA Challenge</h4>
-                                <p class="text-sm text-slate-500">07/2024</p>
+                                <p class="text-sm text-slate-500 mb-1">07/2024</p>
+                                 <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded border border-slate-200">
+                                    <i class="fas fa-medal mr-1"></i>Giải Nhì
+                                </span>
                             </div>
                         </div>
-                        <div class="flex gap-4 items-start p-4 bg-white rounded-lg shadow-sm border border-slate-100">
-                            <div class="text-slate-400 mt-1"><i class="fas fa-medal"></i></div>
-                            <div>
-                                <h4 class="font-bold text-dark">Giải Nhì "Ứng Dụng Tin Học Trong Chi Tiết Máy"</h4>
-                                <p class="text-sm text-slate-500">04/2024</p>
+
+                         <!-- Award 3 -->
+                         <div class="flex gap-4 items-start p-4 bg-white rounded-lg shadow-sm border border-slate-100 hover:shadow-md transition">
+                            <div class="w-24 h-24 flex-shrink-0 bg-slate-100 rounded-md overflow-hidden border border-slate-200">
+                               <img src="assets/award3.jpg" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/150?text=IMG'">
                             </div>
-                        </div>
-                        <div class="flex gap-4 items-start p-4 bg-white rounded-lg shadow-sm border border-slate-100">
-                            <div class="text-yellow-500 mt-1"><i class="fas fa-trophy"></i></div>
+                           <div>
+                               <h4 class="font-bold text-dark">Giải Nhì "Ứng Dụng Tin Học Trong CTM"</h4>
+                               <p class="text-sm text-slate-500 mb-1">04/2024</p>
+                                <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded border border-slate-200">
+                                   <i class="fas fa-medal mr-1"></i>Giải Nhì
+                               </span>
+                           </div>
+                       </div>
+
+                        <!-- Award 4 -->
+                        <div class="flex gap-4 items-start p-4 bg-white rounded-lg shadow-sm border border-slate-100 hover:shadow-md transition">
+                             <div class="w-24 h-24 flex-shrink-0 bg-slate-100 rounded-md overflow-hidden border border-slate-200">
+                                <img src="assets/award4.jpg" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/150?text=IMG'">
+                             </div>
                             <div>
-                                <h4 class="font-bold text-dark">Giải Nhất Thiết kế 3D Hệ Thống Truyền Động Cơ Khí</h4>
-                                <p class="text-sm text-slate-500">10/2023</p>
+                                <h4 class="font-bold text-dark">Giải Nhất Thiết kế 3D Truyền Động CK</h4>
+                                <p class="text-sm text-slate-500 mb-1">10/2023</p>
+                                <span class="text-xs font-semibold text-yellow-600 bg-yellow-50 px-2 py-1 rounded border border-yellow-100">
+                                    <i class="fas fa-trophy mr-1"></i>Giải Nhất
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -465,84 +512,4 @@
                     </div>
                     <div class="bg-white p-4 rounded-lg border border-slate-200 text-center hover:border-primary transition cursor-default">
                         <i class="fas fa-file-powerpoint text-2xl text-orange-500 mb-2"></i>
-                        <div class="font-semibold text-sm">Ultimate PowerPoint</div>
-                        <div class="text-xs text-slate-500">Gitiho - 03/2023</div>
-                    </div>
-                    <div class="bg-white p-4 rounded-lg border border-slate-200 text-center hover:border-primary transition cursor-default">
-                        <i class="fas fa-layer-group text-2xl text-blue-400 mb-2"></i>
-                        <div class="font-semibold text-sm">AutoCad Designing</div>
-                        <div class="text-xs text-slate-500">UTC2 - 04/2022</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer / Contact -->
-    <footer id="contact" class="bg-dark text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold mb-4">Liên hệ với tôi</h2>
-                    <p class="text-slate-400 mb-6">
-                        Tôi luôn sẵn sàng cho những cơ hội hợp tác mới, đặc biệt là trong lĩnh vực Tự động hóa và OE.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-3">
-                            <i class="fas fa-envelope text-primary w-6"></i>
-                            <a href="mailto:dhthiendp1@gmail.com" class="hover:text-primary transition">dhthiendp1@gmail.com</a>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fas fa-phone text-primary w-6"></i>
-                            <a href="tel:0373959432" class="hover:text-primary transition">0373 959 432</a>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fas fa-map-marker-alt text-primary w-6"></i>
-                            <span>TP. Hồ Chí Minh</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="flex flex-col items-start md:items-end">
-                    <div class="flex gap-4 mb-6">
-                         <a href="https://linkedin.com/in/dhthiendp1" target="_blank" class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
-                            <i class="fab fa-linkedin-in text-xl"></i>
-                        </a>
-                        <a href="mailto:dhthiendp1@gmail.com" class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center hover:bg-red-500 transition duration-300">
-                            <i class="fas fa-envelope text-xl"></i>
-                        </a>
-                    </div>
-                    <p class="text-slate-500 text-sm">© 2025 Đỗ Hữu Thiên. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript for Mobile Menu & Scroll Effect -->
-    <script>
-        // Toggle Mobile Menu
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Navbar blur effect on scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                navbar.classList.add('shadow-md');
-            } else {
-                navbar.classList.remove('shadow-md');
-            }
-        });
-        
-        // Copy Email to Clipboard (Optional Enhancement)
-        function copyEmail() {
-             navigator.clipboard.writeText("dhthiendp1@gmail.com");
-             alert("Đã sao chép email vào bộ nhớ tạm!");
-        }
-    </script>
-</body>
-</html>
+                        <div class="font-semibold text-sm">Ultimate PowerPoint
