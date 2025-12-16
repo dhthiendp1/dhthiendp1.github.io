@@ -1,7 +1,525 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello There</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đỗ Hữu Thiên | Portfolio Cơ Điện Tử</title>
+    <meta name="description" content="Portfolio của Đỗ Hữu Thiên - Kỹ sư Cơ Điện Tử, chuyên về Tự động hóa, AI và Robotics.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2563eb', // Blue-600
+                        secondary: '#475569', // Slate-600
+                        dark: '#0f172a', // Slate-900
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-effect border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-primary">DHThien<span class="text-dark">.Dev</span></a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-slate-600 hover:text-primary font-medium transition">Giới thiệu</a>
+                    <a href="#skills" class="text-slate-600 hover:text-primary font-medium transition">Kỹ năng</a>
+                    <a href="#projects" class="text-slate-600 hover:text-primary font-medium transition">Dự án</a>
+                    <a href="#awards" class="text-slate-600 hover:text-primary font-medium transition">Thành tích</a>
+                    <a href="#contact" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-700 transition shadow-lg shadow-blue-500/30">Liên hệ</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1 shadow-lg">
+                <a href="#about" class="block px-3 py-2 text-slate-600 hover:text-primary hover:bg-slate-50 rounded-md">Giới thiệu</a>
+                <a href="#skills" class="block px-3 py-2 text-slate-600 hover:text-primary hover:bg-slate-50 rounded-md">Kỹ năng</a>
+                <a href="#projects" class="block px-3 py-2 text-slate-600 hover:text-primary hover:bg-slate-50 rounded-md">Dự án</a>
+                <a href="#awards" class="block px-3 py-2 text-slate-600 hover:text-primary hover:bg-slate-50 rounded-md">Thành tích</a>
+                <a href="#contact" class="block px-3 py-2 text-primary font-semibold">Liên hệ ngay</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 -z-10">
+             <!-- Abstract Background Shapes -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-blue-100 blur-3xl opacity-50"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-purple-100 blur-3xl opacity-50"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <div class="inline-block px-3 py-1 mb-4 text-sm font-semibold text-blue-800 bg-blue-100 rounded-full">
+                    <i class="fas fa-robot mr-2"></i>Kỹ Thuật Cơ Điện Tử & Tự Động Hóa
+                </div>
+                <h1 class="text-4xl lg:text-6xl font-bold text-dark mb-6 leading-tight">
+                    Xin chào, mình là <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Đỗ Hữu Thiên</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+                    Sinh viên Cơ Điện Tử tại ĐH Giao Thông Vận Tải (UTC2). Đam mê thiết kế máy, lập trình nhúng, AI ứng dụng và tối ưu hóa quy trình sản xuất (Operational Excellence).
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#contact" class="px-8 py-3 bg-primary text-white rounded-full font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Liên hệ hợp tác
+                    </a>
+                    <a href="#" onclick="alert('Tính năng tải CV đang được cập nhật!')" class="px-8 py-3 bg-white text-slate-700 border border-slate-300 rounded-full font-semibold hover:bg-slate-50 transition flex items-center justify-center gap-2">
+                        <i class="fas fa-download"></i> Tải CV
+                    </a>
+                </div>
+                
+                <div class="mt-8 flex justify-center lg:justify-start gap-6">
+                    <a href="https://linkedin.com/in/dhthiendp1" target="_blank" class="text-slate-400 hover:text-[#0077b5] transition text-2xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:dhthiendp1@gmail.com" class="text-slate-400 hover:text-red-500 transition text-2xl"><i class="fas fa-envelope"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-black transition text-2xl"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div class="lg:w-1/2 flex justify-center relative">
+                <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-full opacity-20 animate-pulse"></div>
+                    <!-- Placeholder Avatar using FontAwesome User Icon since no image provided -->
+                    <div class="absolute inset-2 bg-white rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-2xl">
+                         <i class="fas fa-user-graduate text-9xl text-slate-300"></i>
+                    </div>
+                    <!-- Floating Cards -->
+                    <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg border border-slate-100 animate-bounce" style="animation-duration: 3s;">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-green-100 p-2 rounded-lg text-green-600">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500">Kinh nghiệm</p>
+                                <p class="font-bold text-dark">Thực tập sinh Kỹ thuật</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Objectives Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark">Mục Tiêu Nghề Nghiệp</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Short Term -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-hourglass-half text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Ngắn Hạn (4-6 tháng)</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Áp dụng kiến thức về cơ khí, tự động hoá vào thực tế. Tập trung vào quy trình thiết kế sản phẩm, bóc tách khối lượng và quản lý vật tư sản phẩm. Hoàn thành tốt vai trò thực tập sinh và học hỏi quy trình công nghiệp.
+                    </p>
+                </div>
+
+                <!-- Long Term -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition group">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-chart-line text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Dài Hạn (1-5 năm)</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Phát triển chuyên sâu về thiết kế, phân tích sản phẩm cơ khí và tự động hoá. Hướng tới vị trí <strong>Kỹ sư OE (Operational Excellence)</strong> chủ chốt, chuyên tối ưu hóa quy trình, nâng cao hiệu suất, giảm lãng phí và tạo giá trị bền vững cho doanh nghiệp.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark">Kỹ Năng Chuyên Môn</h2>
+                <p class="text-slate-500 mt-4">Sự kết hợp giữa Cơ khí, Lập trình và Trí tuệ nhân tạo</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- CAD/CAM -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                    <h3 class="text-lg font-bold text-dark mb-4 flex items-center gap-2">
+                        <i class="fas fa-drafting-compass text-primary"></i> Thiết kế & Gia công (CAD/CAM)
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span>Inventor / SolidWorks</span>
+                                <span class="font-semibold">Advanced</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span>AutoCAD</span>
+                                <span class="font-semibold">Good</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span>MasterCAM / Inventor CAM</span>
+                                <span class="font-semibold">Good</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                    <h3 class="text-lg font-bold text-dark mb-4 flex items-center gap-2">
+                        <i class="fas fa-code text-primary"></i> Lập trình & Nhúng
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Python</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">C/C++</span>
+                        <span class="px-3 py-1 bg-orange-50 text-orange-700 rounded-full text-sm font-medium">STM32</span>
+                        <span class="px-3 py-1 bg-orange-50 text-orange-700 rounded-full text-sm font-medium">PLC Siemens</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">OpenCV</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">YOLO</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">PyTorch</span>
+                    </div>
+                    <p class="mt-4 text-sm text-slate-500">
+                        Có kinh nghiệm làm việc với vi điều khiển STM32-H750VBT6, TMSF28335 và lập trình PLC S7-1200/1500 (TIA Portal).
+                    </p>
+                </div>
+
+                <!-- AI & Robot -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                    <h3 class="text-lg font-bold text-dark mb-4 flex items-center gap-2">
+                        <i class="fas fa-brain text-primary"></i> AI & Robotics
+                    </h3>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Ứng dụng AI tối ưu hóa quy trình sản xuất & vật liệu.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>TM Flow (Cobot TEMAS) tích hợp xử lý ảnh.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Robot Studio ABB (Lập trình quỹ đạo).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Tiếng Anh B2 (Đọc hiểu tài liệu kỹ thuật).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-dark">Dự Án Nổi Bật</h2>
+                    <p class="text-slate-500 mt-2">Các dự án thực tế và nghiên cứu khoa học</p>
+                </div>
+                <!-- <a href="#" class="text-primary font-semibold hover:underline mt-4 md:mt-0">Xem tất cả dự án <i class="fas fa-arrow-right ml-1"></i></a> -->
+            </div>
+
+            <div class="space-y-12">
+                <!-- Project 1 -->
+                <div class="flex flex-col lg:flex-row gap-8 items-start border-b border-slate-100 pb-12">
+                    <div class="lg:w-5/12 w-full bg-slate-100 h-64 rounded-xl flex items-center justify-center overflow-hidden relative group">
+                         <!-- Placeholder for project image -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <i class="fas fa-industry text-6xl text-slate-300 group-hover:scale-110 transition duration-500"></i>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <span class="bg-yellow-500 text-xs font-bold px-2 py-1 rounded">Á Quân</span>
+                        </div>
+                    </div>
+                    <div class="lg:w-7/12 w-full">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-2xl font-bold text-dark">MTA Challenge | Smart Factory Solution</h3>
+                        </div>
+                        <p class="text-primary font-medium mb-4">Cuộc thi MTA Challenge - Informa Markets</p>
+                        <p class="text-slate-600 mb-6">
+                            Giải pháp nhà máy thông minh ứng dụng AI và Cobot để phân loại, kiểm tra lỗi sản phẩm cơ khí tự động trên dây chuyền.
+                        </p>
+                        
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-100 mb-6">
+                            <h4 class="font-semibold text-sm mb-2 text-dark">Nhiệm vụ chính:</h4>
+                            <ul class="list-disc list-inside text-sm text-slate-600 space-y-1">
+                                <li>Lập trình điều khiển Techman AI Cobot, tích hợp xử lý ảnh trên TM Flow.</li>
+                                <li>Thiết lập logic an toàn giữa người và máy.</li>
+                                <li>Kiểm soát chất lượng sản phẩm bằng Master Vision.</li>
+                                <li>Ứng dụng SmartLabel Cloud.</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 border border-slate-200 text-slate-600 rounded-full text-xs">AI Cobot</span>
+                            <span class="px-3 py-1 border border-slate-200 text-slate-600 rounded-full text-xs">Computer Vision</span>
+                            <span class="px-3 py-1 border border-slate-200 text-slate-600 rounded-full text-xs">TM Flow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="flex flex-col lg:flex-row gap-8 items-start">
+                    <div class="lg:w-5/12 w-full bg-slate-100 h-64 rounded-xl flex items-center justify-center overflow-hidden relative group">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <i class="fas fa-robot text-6xl text-slate-300 group-hover:scale-110 transition duration-500"></i>
+                         <div class="absolute bottom-4 left-4 text-white">
+                            <span class="bg-blue-500 text-xs font-bold px-2 py-1 rounded">Giải Khuyến Khích</span>
+                        </div>
+                    </div>
+                    <div class="lg:w-7/12 w-full">
+                        <h3 class="text-2xl font-bold text-dark">Nghiên cứu khoa học: Cánh tay robot 4 bậc tự do</h3>
+                        <p class="text-primary font-medium mb-4">Môi trường hàn kim loại chi phí thấp</p>
+                        <p class="text-slate-600 mb-6">
+                            Thiết kế và chế tạo mô hình cánh tay robot hoạt động trong môi trường hàn, tối ưu hóa chi phí nhưng vẫn đảm bảo độ chính xác động học.
+                        </p>
+
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-100 mb-6">
+                            <h4 class="font-semibold text-sm mb-2 text-dark">Nhiệm vụ chính:</h4>
+                            <ul class="list-disc list-inside text-sm text-slate-600 space-y-1">
+                                <li>Thiết kế 3D toàn bộ hệ thống trên Inventor.</li>
+                                <li>Tính toán động học và lựa chọn động cơ tối ưu.</li>
+                                <li>Mô phỏng chuyển động thực tế bằng Matlab/Simulink.</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 border border-slate-200 text-slate-600 rounded-full text-xs">Inventor</span>
+                            <span class="px-3 py-1 border border-slate-200 text-slate-600 rounded-full text-xs">Matlab/Simulink</span>
+                            <span class="px-3 py-1 border border-slate-200 text-slate-600 rounded-full text-xs">Robot Kinematics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Education Section -->
+    <section id="awards" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Education -->
+                <div>
+                    <h2 class="text-2xl font-bold text-dark mb-8 flex items-center gap-3">
+                        <span class="w-8 h-8 bg-blue-100 rounded text-blue-600 flex items-center justify-center text-sm"><i class="fas fa-graduation-cap"></i></span>
+                        Học Vấn
+                    </h2>
+                    <div class="relative pl-8 border-l-2 border-slate-200 space-y-8">
+                        <div class="relative">
+                            <div class="absolute -left-[41px] bg-white border-2 border-primary w-5 h-5 rounded-full"></div>
+                            <span class="text-sm text-slate-500">2021 - 2026 (Dự kiến)</span>
+                            <h3 class="text-lg font-bold text-dark mt-1">Kỹ thuật Cơ Điện Tử</h3>
+                            <p class="text-primary font-medium">ĐH Giao Thông Vận Tải - Phân hiệu TP.HCM</p>
+                            <p class="text-slate-600 mt-2 text-sm">Tập trung nghiên cứu về Tự động hóa, Thiết kế máy và Lập trình nhúng.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Awards -->
+                <div>
+                    <h2 class="text-2xl font-bold text-dark mb-8 flex items-center gap-3">
+                        <span class="w-8 h-8 bg-yellow-100 rounded text-yellow-600 flex items-center justify-center text-sm"><i class="fas fa-trophy"></i></span>
+                        Giải Thưởng & Thành Tích
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="flex gap-4 items-start p-4 bg-white rounded-lg shadow-sm border border-slate-100">
+                            <div class="text-yellow-500 mt-1"><i class="fas fa-medal"></i></div>
+                            <div>
+                                <h4 class="font-bold text-dark">Giải Nhì Olympic Cơ Học Toàn Quốc lần thứ 35</h4>
+                                <p class="text-sm text-slate-500">Môn: Ứng dụng tin học trong chi tiết máy (04/2025)</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start p-4 bg-white rounded-lg shadow-sm border border-slate-100">
+                            <div class="text-slate-400 mt-1"><i class="fas fa-medal"></i></div>
+                            <div>
+                                <h4 class="font-bold text-dark">Giải Nhì cuộc thi MTA Challenge</h4>
+                                <p class="text-sm text-slate-500">07/2024</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start p-4 bg-white rounded-lg shadow-sm border border-slate-100">
+                            <div class="text-slate-400 mt-1"><i class="fas fa-medal"></i></div>
+                            <div>
+                                <h4 class="font-bold text-dark">Giải Nhì "Ứng Dụng Tin Học Trong Chi Tiết Máy"</h4>
+                                <p class="text-sm text-slate-500">04/2024</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start p-4 bg-white rounded-lg shadow-sm border border-slate-100">
+                            <div class="text-yellow-500 mt-1"><i class="fas fa-trophy"></i></div>
+                            <div>
+                                <h4 class="font-bold text-dark">Giải Nhất Thiết kế 3D Hệ Thống Truyền Động Cơ Khí</h4>
+                                <p class="text-sm text-slate-500">10/2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certificates Grid -->
+            <div class="mt-16">
+                 <h2 class="text-2xl font-bold text-dark mb-8 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-green-100 rounded text-green-600 flex items-center justify-center text-sm"><i class="fas fa-certificate"></i></span>
+                    Chứng Chỉ
+                </h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-white p-4 rounded-lg border border-slate-200 text-center hover:border-primary transition cursor-default">
+                        <i class="fab fa-google text-2xl text-slate-400 mb-2"></i>
+                        <div class="font-semibold text-sm">Gemini Certified Student</div>
+                        <div class="text-xs text-slate-500">Google - 12/2025</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border border-slate-200 text-center hover:border-primary transition cursor-default">
+                        <i class="fab fa-google text-2xl text-slate-400 mb-2"></i>
+                        <div class="font-semibold text-sm">Gemini Certified Educator</div>
+                        <div class="text-xs text-slate-500">Google - 12/2025</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border border-slate-200 text-center hover:border-primary transition cursor-default">
+                        <i class="fas fa-file-powerpoint text-2xl text-orange-500 mb-2"></i>
+                        <div class="font-semibold text-sm">Ultimate PowerPoint</div>
+                        <div class="text-xs text-slate-500">Gitiho - 03/2023</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border border-slate-200 text-center hover:border-primary transition cursor-default">
+                        <i class="fas fa-layer-group text-2xl text-blue-400 mb-2"></i>
+                        <div class="font-semibold text-sm">AutoCad Designing</div>
+                        <div class="text-xs text-slate-500">UTC2 - 04/2022</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Liên hệ với tôi</h2>
+                    <p class="text-slate-400 mb-6">
+                        Tôi luôn sẵn sàng cho những cơ hội hợp tác mới, đặc biệt là trong lĩnh vực Tự động hóa và OE.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-primary w-6"></i>
+                            <a href="mailto:dhthiendp1@gmail.com" class="hover:text-primary transition">dhthiendp1@gmail.com</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-phone text-primary w-6"></i>
+                            <a href="tel:0373959432" class="hover:text-primary transition">0373 959 432</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-map-marker-alt text-primary w-6"></i>
+                            <span>TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col items-start md:items-end">
+                    <div class="flex gap-4 mb-6">
+                         <a href="https://linkedin.com/in/dhthiendp1" target="_blank" class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="mailto:dhthiendp1@gmail.com" class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center hover:bg-red-500 transition duration-300">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-slate-500 text-sm">© 2025 Đỗ Hữu Thiên. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu & Scroll Effect -->
+    <script>
+        // Toggle Mobile Menu
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Navbar blur effect on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+        
+        // Copy Email to Clipboard (Optional Enhancement)
+        function copyEmail() {
+             navigator.clipboard.writeText("dhthiendp1@gmail.com");
+             alert("Đã sao chép email vào bộ nhớ tạm!");
+        }
+    </script>
 </body>
 </html>
