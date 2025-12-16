@@ -692,13 +692,22 @@
     <!-- Scripts -->
     <script>
         // --- PRELOADER LOGIC ---
-        window.addEventListener("load", function () {
+        function hidePreloader() {
             const preloader = document.getElementById("preloader");
-            preloader.classList.add("hide");
-            setTimeout(() => {
-                preloader.style.display = "none";
-            }, 500); // Wait for transition to finish
-        });
+            if (preloader && !preloader.classList.contains("hide")) {
+                preloader.classList.add("hide");
+                setTimeout(() => {
+                    preloader.style.display = "none";
+                }, 500); // Wait for transition to finish
+            }
+        }
+
+        // Cách 1: Tắt ngay khi tải xong tài nguyên
+        window.addEventListener("load", hidePreloader);
+
+        // Cách 2 (Mới): Tự động tắt sau tối đa 1 giây nếu mạng chậm hoặc ảnh nặng
+        // Giúp người dùng không phải đợi quá lâu
+        setTimeout(hidePreloader, 1000);
 
         // --- DARK MODE LOGIC ---
         const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
